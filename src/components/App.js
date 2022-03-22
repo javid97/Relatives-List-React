@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import '../styles/App.css';
-import List from "./List";
 
 class App extends Component {
     render() {
@@ -9,10 +8,7 @@ class App extends Component {
           <div id="main">
             <ol key="relativeList">
               {relativeList.map((relative, idx) => (
-                <List
-                  key={`relativeListItem${idx+1}`}
-                  relative={relative}
-                />
+                <li key={`relativeListItem${idx+1}`}>{relative}</li>
               ))}
             </ol>
           </div>
